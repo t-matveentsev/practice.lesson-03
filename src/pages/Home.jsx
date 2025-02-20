@@ -8,7 +8,7 @@ import CountryList from '../components/CountryList/CountryList';
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
-  const [isLoading, setIsLoading] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
     const fetchData = async () => {

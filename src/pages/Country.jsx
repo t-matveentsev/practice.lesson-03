@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Container from '../components/Container/Container';
 import Heading from '../components/Heading/Heading';
 import Section from '../components/Section/Section';
 import { fetchCountry } from '../service/countryApi';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
 import CountryInfo from '../components/CountryInfo/CountryInfo';
 import GoBackBtn from '../components/GoBackBtn/GoBackBtn';
@@ -13,6 +13,8 @@ const Country = () => {
   const [isLoading, setIsLoading] = useState([]);
   const [error, setError] = useState(null);
   const { countryId } = useParams();
+  const location = useLocation();
+  const goBack = useRef(location?.state ?? '/');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +33,7 @@ const Country = () => {
   return (
     <Section>
       <Container>
-        <GoBackBtn path="/" />
+        <GoBackBtn path={goBack.current} />
         {isLoading && <Loader />}
         {error && (
           <Heading
