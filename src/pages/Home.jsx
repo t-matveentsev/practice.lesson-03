@@ -5,8 +5,10 @@ import Section from '../components/Section/Section';
 import { getCountries } from '../service/countryApi';
 import Loader from '../components/Loader/Loader';
 import CountryList from '../components/CountryList/CountryList';
+// import useFetch from '../hooks/useFetch';
 
 const Home = () => {
+  // const { countries, isLoading, error } = useFetch();
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);

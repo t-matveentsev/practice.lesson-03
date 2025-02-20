@@ -14,6 +14,7 @@ const Country = () => {
   const [error, setError] = useState(null);
   const { countryId } = useParams();
   const location = useLocation();
+
   const goBack = useRef(location?.state ?? '/');
 
   useEffect(() => {
