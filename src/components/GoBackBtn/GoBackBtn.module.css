@@ -6,10 +6,10 @@
   border-radius: 4px;
   margin-bottom: 15px;
   padding: 12px 18px;
-  transition: background-color var(--animation-cubicBezie);
+  transition: background var(--animation-cubicBezier);
 }
 
 .link:hover,
 .link:focus {
-  background-color: var(--color-imageBackground);
+  background: var(--color-imageBackground);
 }

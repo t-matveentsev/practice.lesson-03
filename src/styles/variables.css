@@ -8,7 +8,7 @@
   --color-mainBackground: linear-gradient(to top, #0f2027, #203a43, #2c5364);
   --color-tagBackground: linear-gradient(to bottom, #ffd194, #d1913c);
   --color-accent: #5898a7;
-  --color-imageBackground: 'red', 'linear-gradient (90deg, #ff9966,#ff5e62';
+  --color-imageBackground: linear-gradient(90deg, #ff9966, #ff5e62);
 
   /*font*/
   --font-medium: 18px;

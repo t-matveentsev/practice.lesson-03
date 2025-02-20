@@ -1,37 +1,35 @@
-// {
-// flag,
-// capital,
-// countryName,
-// languages = [],
-// population,
-// }
+import s from './CountryInfo.module.css';
 
-const CountryInfo = () => {
+const CountryInfo = ({
+  flag,
+  capital,
+  countryName,
+  languages = [],
+  population,
+}) => {
   return (
-    <h2>CountryInfo</h2>
-    // <div className={styles.wrapper}>
-    //   <div className={styles.flag}>
-    //     <img className={styles.img} src={} alt={} />
-    //   </div>
-    //   <div className={styles.box}>
-    //     <h3 className={styles.capital}>
-    //       Capital: <span className={styles.accent}>{}</span>
-    //     </h3>
+    <div className={s.wrapper}>
+      <div className={s.flag}>
+        <img className={s.img} src={flag} alt={countryName} />
+      </div>
+      <div className={s.box}>
+        <h3 className={s.capital}>
+          Capital: <span className={s.accent}>{capital}</span>
+        </h3>
 
-    //     <h1 className={styles.title}>
-    //       {countryName === 'Russian Federation' ? 'MORDOR' : countryName}
-    //     </h1>
+        <h1 className={s.title}>
+          {countryName === 'Russian Federation' ? 'MORDOR' : countryName}
+        </h1>
 
-    //     <p className={styles.details}>
-    //       Population: <span className={styles.accent}>{}</span>
-    //     </p>
+        <p className={s.details}>
+          Population: <span className={s.accent}>{population}</span>
+        </p>
 
-    //     <p className={styles.details}>
-    //       Languages:{' '}
-    //       <span className={styles.accent}>{}</span>
-    //     </p>
-    //   </div>
-    // </div>
+        <p className={s.details}>
+          Languages: <span className={s.accent}>{languages.join(', ')}</span>
+        </p>
+      </div>
+    </div>
   );
 };
 

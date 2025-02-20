@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
-import css from './GoBackBtn.module.css';
-const GoBackBtn = () => {
-  return <Link className={css.link}>GoBackBtn</Link>;
+import s from './GoBackBtn.module.css';
+const GoBackBtn = ({ path }) => {
+  return (
+    <Link to={path} className={s.link}>
+      GoBackBtn
+    </Link>
+  );
 };
 
 export default GoBackBtn;
